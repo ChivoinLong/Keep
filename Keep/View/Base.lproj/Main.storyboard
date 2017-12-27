@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eq7-xb-Kce">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-Medium</string>
+            <string>AvenirNext-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="am3-Sd-ach">
+            <objects>
+                <navigationController modalTransitionStyle="flipHorizontal" id="eq7-xb-Kce" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="UHT-jG-Lfw">
+                        <rect key="frame" x="0.0" y="20" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.74509803919999995" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="c2b-ja-tlK">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="WND-Hn-kc1" kind="relationship" relationship="rootViewController" id="qh2-IJ-Ahb"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PrK-6a-8as" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1075" y="37"/>
+        </scene>
+        <!--Note-->
+        <scene sceneID="ygY-eo-oxp">
+            <objects>
+                <viewController title="Note" modalTransitionStyle="flipHorizontal" id="WND-Hn-kc1" customClass="HomeViewController" customModule="Keep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1kN-mH-3En">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Unf-US-Ltt">
+                                <rect key="frame" x="0.0" y="116" width="414" height="620"/>
+                                <subviews>
+                                    <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalHuggingPriority="750" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="nD6-y3-xpM">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="576"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        <gestureRecognizers/>
+                                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="8" minimumInteritemSpacing="8" id="bfb-DW-hz3">
+                                            <size key="itemSize" width="50" height="50"/>
+                                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                            <inset key="sectionInset" minX="16" minY="16" maxX="16" maxY="16"/>
+                                        </collectionViewFlowLayout>
+                                        <cells/>
+                                    </collectionView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hck-e6-Kqn">
+                                        <rect key="frame" x="0.0" y="576" width="414" height="44"/>
+                                        <subviews>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="    Take a new note..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dww-ma-ShZ">
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="44"/>
+                                                <gestureRecognizers/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                <color key="textColor" red="0.63131797313690186" green="0.63140875101089478" blue="0.63128930330276489" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="99y-JM-a2d" appends="YES" id="Byh-dg-I2q"/>
+                                                </connections>
+                                            </label>
+                                            <tabBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4bm-fw-IM1">
+                                                <rect key="frame" x="207" y="0.0" width="207" height="44"/>
+                                                <gestureRecognizers/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="44" id="3qD-Mz-Kyn"/>
+                                                </constraints>
+                                                <items>
+                                                    <tabBarItem image="ic_list" selectedImage="ic_list" id="D3S-jn-wMq">
+                                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-13"/>
+                                                    </tabBarItem>
+                                                    <tabBarItem image="ic_create" selectedImage="ic_create" id="Zd5-5m-QM2">
+                                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-13"/>
+                                                    </tabBarItem>
+                                                    <tabBarItem image="ic_mic" selectedImage="ic_mic" id="8MF-iI-IpU">
+                                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-13"/>
+                                                    </tabBarItem>
+                                                    <tabBarItem image="ic_camera" selectedImage="ic_camera" id="rUC-Aw-oYe">
+                                                        <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-13"/>
+                                                    </tabBarItem>
+                                                </items>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="CKe-uu-4sz" appends="YES" id="OUO-ro-xvh"/>
+                                                </connections>
+                                            </tabBar>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Unf-US-Ltt" firstAttribute="bottom" secondItem="5kK-Id-qqX" secondAttribute="bottom" id="3ii-sr-2kb"/>
+                            <constraint firstItem="Unf-US-Ltt" firstAttribute="top" secondItem="5kK-Id-qqX" secondAttribute="top" id="bmU-9x-YHK"/>
+                            <constraint firstItem="Unf-US-Ltt" firstAttribute="trailing" secondItem="5kK-Id-qqX" secondAttribute="trailing" id="pUn-Qi-7ey"/>
+                            <constraint firstItem="Unf-US-Ltt" firstAttribute="leading" secondItem="5kK-Id-qqX" secondAttribute="leading" id="vBg-XC-Zjr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5kK-Id-qqX"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Notes" largeTitleDisplayMode="always" id="pfk-PC-41m">
+                        <rightBarButtonItems>
+                            <barButtonItem title="view" image="ic_view_stream" id="ZO9-QV-iaW"/>
+                            <barButtonItem title="search" image="ic_search" id="isR-zi-ekB"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="newNoteLabel" destination="dww-ma-ShZ" id="Nwj-mr-b9L"/>
+                        <outlet property="newNoteTabBar" destination="4bm-fw-IM1" id="dEp-YA-PN1"/>
+                        <outlet property="notesCollectionView" destination="nD6-y3-xpM" id="WpH-rT-Hh7"/>
+                        <segue destination="y07-CQ-GjN" kind="show" identifier="gotoDetailSegue" id="8Cl-rY-dTf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rZT-Ur-Bvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="99y-JM-a2d">
+                    <connections>
+                        <action selector="didTapView:" destination="WND-Hn-kc1" id="6pc-oo-8Hs"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="CKe-uu-4sz">
+                    <connections>
+                        <action selector="didTapView:" destination="WND-Hn-kc1" id="hhn-7e-eKA"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-204.34782608695653" y="36.684782608695656"/>
+        </scene>
+        <!--New Note-->
+        <scene sceneID="2By-E1-jfA">
+            <objects>
+                <viewController id="y07-CQ-GjN" customClass="DetailViewController" customModule="Keep" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="z3P-6k-QTX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Title" adjustsFontSizeToFit="NO" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="B8c-TV-q7h">
+                                <rect key="frame" x="16" y="132" width="382" height="29"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" returnKeyType="next" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textField>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Note" translatesAutoresizingMaskIntoConstraints="NO" id="mmN-XO-Gtu">
+                                <rect key="frame" x="16" y="177" width="382" height="515"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences" autocorrectionType="no" spellCheckingType="no" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no"/>
+                            </textView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3j3-2b-AiP">
+                                <rect key="frame" x="0.0" y="692" width="414" height="44"/>
+                                <items>
+                                    <barButtonItem title="add" image="ic_add" id="ra2-Eh-uWp">
+                                        <color key="tintColor" red="0.6352391839" green="0.63533055780000003" blue="0.63521045450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="didTouchAddBarButton:" destination="y07-CQ-GjN" id="aje-jt-aO2"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem systemItem="flexibleSpace" id="4BY-l1-fIS">
+                                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </barButtonItem>
+                                    <barButtonItem title="more" image="ic_more" id="HJN-Ar-nDS">
+                                        <color key="tintColor" red="0.6352391839" green="0.63533055780000003" blue="0.63521045450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="didTouchMoreBarButton:" destination="y07-CQ-GjN" id="jW3-n6-5e9"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                                <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            </toolbar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mmN-XO-Gtu" firstAttribute="leading" secondItem="sSu-hc-KPs" secondAttribute="leading" constant="16" id="4qD-B8-5Nl"/>
+                            <constraint firstItem="3j3-2b-AiP" firstAttribute="leading" secondItem="z3P-6k-QTX" secondAttribute="leading" id="ARq-6a-w4G"/>
+                            <constraint firstItem="B8c-TV-q7h" firstAttribute="leading" secondItem="sSu-hc-KPs" secondAttribute="leading" constant="16" id="Sjn-Dx-Sqw"/>
+                            <constraint firstAttribute="trailing" secondItem="3j3-2b-AiP" secondAttribute="trailing" id="WBB-pP-AWI"/>
+                            <constraint firstAttribute="bottom" secondItem="3j3-2b-AiP" secondAttribute="bottom" id="de2-R0-jvM"/>
+                            <constraint firstItem="sSu-hc-KPs" firstAttribute="trailing" secondItem="B8c-TV-q7h" secondAttribute="trailing" constant="16" id="gZI-T3-wEe"/>
+                            <constraint firstItem="3j3-2b-AiP" firstAttribute="top" secondItem="mmN-XO-Gtu" secondAttribute="bottom" id="h9F-TH-dKA"/>
+                            <constraint firstItem="B8c-TV-q7h" firstAttribute="top" secondItem="sSu-hc-KPs" secondAttribute="top" constant="16" id="isB-gw-8MK"/>
+                            <constraint firstItem="mmN-XO-Gtu" firstAttribute="top" secondItem="B8c-TV-q7h" secondAttribute="bottom" constant="16" id="mI1-th-q6O"/>
+                            <constraint firstItem="sSu-hc-KPs" firstAttribute="trailing" secondItem="mmN-XO-Gtu" secondAttribute="trailing" constant="16" id="tMF-Q5-Ce7"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="sSu-hc-KPs"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="New Note" largeTitleDisplayMode="always" id="v6n-R6-dXu">
+                        <rightBarButtonItems>
+                            <barButtonItem title="move" image="ic_move_to_inbox" id="mBZ-oP-GPv"/>
+                            <barButtonItem title="touch" image="ic_touch" id="TTl-L5-bDJ"/>
+                            <barButtonItem title="star" image="ic_star" id="DZp-LF-bv3"/>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="actionsToolbar" destination="3j3-2b-AiP" id="2Ti-PE-xgA"/>
+                        <outlet property="actionsToolbarForKeyboard" destination="9vg-nx-bFM" id="Uz8-Ty-mcU"/>
+                        <outlet property="noteTextView" destination="mmN-XO-Gtu" id="b3J-2o-Yb7"/>
+                        <outlet property="textViewBottomSpaceConstraint" destination="h9F-TH-dKA" id="QNh-JF-YGy"/>
+                        <outlet property="titleTextField" destination="B8c-TV-q7h" id="CXe-5J-PwL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x3e-Qc-XkR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translucent="NO" id="9vg-nx-bFM">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem title="add" image="ic_add" id="aDF-hC-XNF">
+                            <color key="tintColor" red="0.6352391839" green="0.63533055780000003" blue="0.63521045450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="didTouchAddBarButton:" destination="y07-CQ-GjN" id="O6w-cy-uWe"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem systemItem="flexibleSpace" id="Gzl-eS-BD0">
+                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </barButtonItem>
+                        <barButtonItem title="more" image="ic_more" id="gwF-l3-CEV">
+                            <color key="tintColor" red="0.6352391839" green="0.63533055780000003" blue="0.63521045450000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <action selector="didTouchMoreBarButton:" destination="y07-CQ-GjN" id="ntc-vt-GAS"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="tintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </toolbar>
+            </objects>
+            <point key="canvasLocation" x="653.62318840579712" y="36.684782608695656"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_add" width="24" height="24"/>
+        <image name="ic_camera" width="24" height="24"/>
+        <image name="ic_create" width="24" height="24"/>
+        <image name="ic_list" width="24" height="24"/>
+        <image name="ic_mic" width="24" height="24"/>
+        <image name="ic_more" width="24" height="24"/>
+        <image name="ic_move_to_inbox" width="24" height="24"/>
+        <image name="ic_search" width="24" height="24"/>
+        <image name="ic_star" width="24" height="24"/>
+        <image name="ic_touch" width="24" height="24"/>
+        <image name="ic_view_stream" width="24" height="24"/>
+    </resources>
+    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+</document>
